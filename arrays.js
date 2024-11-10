@@ -60,7 +60,7 @@ function getArrIndex(arr, searchTerm){
     for(let i=0; i < arr.length; i++ ){
 
         //if that name is equal to the searchTerm
-        if(arr[i] === searchTerm){
+        if(arr[i].toLowerCase() === searchTerm.toLowerCase() ){
             // return that index number
             return i;
         }
@@ -73,9 +73,9 @@ function getArrIndex(arr, searchTerm){
 }
 
 
-// fix to were it doesn't match case
-console.log(getArrIndex(peopleNamesArr, 'Kate'));
-
-
-
+// fix to were it doesn't match case <- <- <- do this
+console.log(getArrIndex(peopleNamesArr, 'liam'));
+console.log(getArrIndex(peopleNamesArr, 'LIAM'));
+console.log(getArrIndex(peopleNamesArr, 'KATE'));
+console.log(getArrIndex(peopleNamesArr, 'kate'));
 // shift alt down key
